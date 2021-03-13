@@ -60,3 +60,10 @@ export const contentrankApi = {
 	}
 }
 
+export const olinenumApi={
+	onlinenum(){
+		return axios.get(url.onlinenum).then((response) => {
+			return response.data
+	    })
+   }
+}

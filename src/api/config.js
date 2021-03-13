@@ -18,6 +18,7 @@ export const regionTags = [
   {
     name: '动画',
     key: 1,
+    sortKeys:'douga',
     blocks: [
       { name: '推荐', key: 1 },
       { name: 'MAD·AMV', key: 24 },
@@ -29,6 +30,7 @@ export const regionTags = [
   },
   {
     name: '番剧',
+    sortKeys:'anime',
     key: 13,
     blocks: [
       { name: '推荐', key: 13 },
@@ -41,6 +43,7 @@ export const regionTags = [
   {
     name: '国创',
     key: 167,
+    sortKeys:'guochuang',
     blocks: [
       { name: '推荐', key: 167 },
       { name: '国产动画', key: 153 },
@@ -53,6 +56,7 @@ export const regionTags = [
   {
     name: '音乐',
     key: 3,
+    sortKeys:'music',
     blocks: [
       { name: '推荐', key: 3 },
       { name: '原创音乐', key: 28 },
@@ -68,6 +72,7 @@ export const regionTags = [
   {
     name: '舞蹈',
     key: 129,
+    sortKeys:'dance',
     blocks: [
       { name: '推荐', key: 129 },
       { name: '宅舞', key: 20 },
@@ -81,6 +86,7 @@ export const regionTags = [
   {
     name: '游戏',
     key: 4,
+    sortKeys:'game',
     blocks: [
       { name: '推荐', key: 4 },
       { name: '单机游戏', key: 17 },
@@ -96,6 +102,7 @@ export const regionTags = [
   {
     name: '科技',
     key: 36,
+    sortKeys:'technology',
     blocks: [
       { name: '推荐', key: 36 },
       { name: '科学科普', key: 201 },
@@ -110,6 +117,7 @@ export const regionTags = [
   {
     name: '数码',
     key: 188,
+    sortKeys:'digital',
     blocks: [
       { name: '推荐', key: 188 },
       { name: '手机平板', key: 95 },
@@ -121,6 +129,7 @@ export const regionTags = [
   {
     name: '生活',
     key: 160,
+    sortKeys:'life',
     blocks: [
       { name: '推荐', key: 160 },
       { name: '搞笑', key: 138 },
@@ -136,6 +145,7 @@ export const regionTags = [
   {
     name: '鬼畜',
     key: 119,
+    sortKeys:'kichiku',
     blocks: [
       { name: '推荐', key: 119 },
       { name: '鬼畜调教', key: 22 },
@@ -147,6 +157,7 @@ export const regionTags = [
   {
     name: '时尚',
     key: 155,
+    sortKeys:'fashion',
     blocks: [
       { name: '推荐', key: 155 },
       { name: '美妆', key: 157 },
@@ -159,6 +170,7 @@ export const regionTags = [
   {
     name: '娱乐',
     key: 5,
+    sortKeys:'ent',
     blocks: [
       { name: '推荐', key: 5 },
       { name: '综艺', key: 71 },
@@ -169,6 +181,7 @@ export const regionTags = [
   {
     name: '影视',
     key: 181,
+    sortKeys:'cinephile',
     blocks: [
       { name: '推荐', key: 181 },
       { name: '影视杂谈', key: 182 },
@@ -177,16 +190,18 @@ export const regionTags = [
       { name: '预告·资讯', key: 184 }
     ]
   },
-  {
-    name: '广告',
-    key: 165,
-    blocks: [
-      { name: '推荐', key: 165 }
-    ]
-  },
+  // {
+  //   name: '广告',
+  //   key: 165,
+  //   sortKeys:'douga',
+  //   blocks: [
+  //     { name: '推荐', key: 165 }
+  //   ]
+  // },
   {
     name: '纪录片',
     key: 177,
+    sortKeys:'documentary',
     blocks: [
       { name: '推荐', key: 177 },
       { name: '人文·历史', key: 37 },
@@ -198,6 +213,7 @@ export const regionTags = [
   {
     name: '电影',
     key: 23,
+    sortKeys:'movie',
     blocks: [
       { name: '推荐', key: 23 },
       { name: '华语电影', key: 147 },
@@ -209,6 +225,7 @@ export const regionTags = [
   {
     name: '电视剧',
     key: 11,
+    sortKeys:'tv',
     blocks: [
       { name: '推荐', key: 11 },
       { name: '国产剧', key: 185 },

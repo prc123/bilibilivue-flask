@@ -19,3 +19,4 @@ export const contet = serverRoot + '/ding'
 export const contentrank = serverRoot + '/contentrank'
 // 一周排行
 export const contentrankweek = serverRoot + '/contentrankweek'
+export const onlinenum = 'https://api.bilibili.com/x/web-interface/online'

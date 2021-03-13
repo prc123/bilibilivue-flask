@@ -1,6 +1,6 @@
 import { contentApi, contentrankApi } from 'api'
 import * as TYPE from '../actionType/contentType'
-
+import { ERR_OK, regionTags } from 'api/config'
 
 // douga 动画 1
 // bangumi 番剧 13
@@ -19,6 +19,7 @@ import * as TYPE from '../actionType/contentType'
 
 const state = {
 	// 默认排序
+	regionTags:regionTags,
 	sortKeys: ['douga', 'bangumi', 'music', 'dance', 'game', 'technology', 'life', 'kichiku', 'fashion', 'ad', 'ent', 'movie', 'teleplay'],
 	sortIds: [1, 13, 3, 129, 4, 36, 160, 119, 155, 165, 5, 23, 11],
 	sortValues: ['动画', '番剧', '音乐', '舞蹈', '游戏', '科技', '生活', '鬼畜', '时尚', '广告', '娱乐', '电影', 'TV剧'],
@@ -28,6 +29,7 @@ const state = {
 }
 
 const getters = {
+	regionTags : regionTags => state.regionTags,
 	rows: state => state.rows,
 	sortKeys: state => state.sortKeys,
 	sortIds: state => state.sortIds,
@@ -39,6 +41,8 @@ const getters = {
 const actions = {
 	getContentRows({commit, state, rootState}) {
 		rootState.requesting = true
+		// console.log(state.regionTags)
+		// console.log(state.rows)
 		commit(TYPE.CONTENT_REQUEST)
 		contentApi.content().then((response) => {
 			rootState.requesting = false
@@ -86,17 +90,24 @@ const mutations = {
 
 	},
 	[TYPE.CONTENT_SUCCESS] (state, response) {
-		for (let i = 0; i < state.sortKeys.length; i++) {
-			let category = state.sortKeys[i] 
-			let rowItem = {
-				category: category,
-				categoryId: state.sortIds[i],
-				name: state.sortValues[i],
-				b_id: `b_${category}`,
-				item: Object.values(response[category])
+			for (let i = 0; i < state.regionTags.length; i++) {
+				console.log(state.regionTags.length)
+				let category = state.regionTags[i].sortKeys
+				if (response[category]==undefined){
+					console.log(state.rows)
+					continue;
+				}
+				let rowItem = {
+					category: category,
+					categoryId: state.regionTags[i].key,
+					name: state.regionTags[i].name,
+					b_id: `b_${category}`,
+					item: Object.values(response[category])
+				}
+				console.log(rowItem)
+				state.rows.push(rowItem)
 			}
-			state.rows.push(rowItem)
-		}
+
 		// for(let key of state.sortKeys) {
 		// 	// console.log(JSON.stringify(Object.values(response[key])))
 		// 	let rowItem = {
