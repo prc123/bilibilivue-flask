@@ -1,7 +1,7 @@
 <template>
 	<div class="lv-item">
 		<a class="lv-preview">
-			<img :src="live.pic">
+			<img :src="live.cover">
 			<div class="lv-mask">
 				<div class="lv-face">
 					<img :src="live.face" style="opacity: 1;">
@@ -11,7 +11,7 @@
 			</div>
 			<span class="b-tag">{{live.areaName}}</span>
 		</a>
-		<a :href="live.link" target="_blank">
+		<a :href="'https://live.bilibili.com'+live.link" target="_blank">
 			<div class="lv-room">
 				<div class="lv-t" :title="live.title">{{live.title}}</div>
 			</div>

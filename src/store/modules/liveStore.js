@@ -37,12 +37,13 @@ const mutations = {
 	[TYPE.LIVE_REQUEST] (state) {
 		
 	},
+
 	[TYPE.LIVE_SUCCESS] (state, live) {
 		state.online_total = live.online_total
 		state.dynamic = live.dynamic
-		state.recommend = live.recommend
-		state.ranking = live.ranking
-		state.preview = live.preview
+		state.recommend = live.recommend_room_list
+		state.ranking = live.ranking_list
+		state.preview = live.preview_banner_list
 		state.recommendAnchor = live.recommendAnchor
 	},
 	[TYPE.LIVE_FAILURE] (state) {

@@ -28,7 +28,7 @@
 			</div>
 			<div class="b-body">
 				<ul class="v-list-live" v-if="recommend">
-					<li v-for="item in recommend">
+					<li v-for="(item,index) in recommend" :key="index" >
 						<BLiveItem :live="item"></BLiveItem>
 					</li>
 				</ul>

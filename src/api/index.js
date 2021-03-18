@@ -67,3 +67,18 @@ export const olinenumApi={
 	    })
    }
 }
+
+export const recommendApi={
+	recommend(){
+		return axios.get(url.contet).then((response) => {
+			if (res.data.code === ERR_OK) {
+				let tmp = Object.values(res.data)
+				for (let i = 0; i < 10; i++) {
+				  for (let j = 0; j < 5; j++) {
+					this.recommendList.push(tmp[i][j])
+				  }
+				}
+			  }
+	    })
+   }
+}

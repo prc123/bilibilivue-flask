@@ -94,8 +94,8 @@ export default {
       zoom: 1;
       display: inline-block;
       vertical-align: top;
-	  width: 860px;
-      height: 50px;
+	    width: 860px;
+      height: 100px;
     }
 
     .menu-r {

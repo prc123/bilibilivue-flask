@@ -12,10 +12,12 @@ const getters = {
 
 const actions = {
 	ranklist({commit, state, rootState}) {
+		
 		rootState.requesting = true
 		commit(TYPE.RANK_LIST_REQUEST)
 		rankApi.ranking3().then((response) => {
 			rootState.requesting = false
+
 			commit(TYPE.RANK_LIST_SUCCESS, response)
 		}, (error) => {
 			rootState.requesting = false
@@ -29,7 +31,9 @@ const mutations = {
 
 	},
 	[TYPE.RANK_LIST_SUCCESS] (state, response) {
-		state.ranklist = _.values(response.recommend.list)
+		// /console.log(response)
+		// state.ranklist = _.values(response.recommend.list)
+		state.ranklist = response.list
 	},
 	[TYPE.RANK_LIST_FAILURE] (state) {
 
