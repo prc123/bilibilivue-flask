@@ -1,0 +1,6 @@
+[submodule "tempFlask"]
+	path = tempFlask
+	url = git@github.com:prc123/tempFlask.git
+[submodule "tempVue"]
+	path = tempVue
+	url = git@github.com:prc123/tempVue.git
